@@ -41,3 +41,19 @@ def get_data(filename='../resources/Plasma_Chamber.tsv'):
 
     return data;
 
+def get_float_data(data=get_data()):
+    """
+    Gets experimental values as a dictionary of float values (with the exception
+    of the date column, which is kept as a string)
+
+    @param data: Data dictionary. Defaults to the data returned by get_data()
+    @return Returns a dictionary of float arrays with the exception of the date
+            column
+    """
+
+    # Convert values
+    for key, value in data.iteritems():
+        if key != 'Date':
+            data[key] = [float(x) if x else None for x in value]
+
+    return data
