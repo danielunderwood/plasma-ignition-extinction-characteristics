@@ -13,6 +13,17 @@ DATA_COL_NAMES = ['Date', 'Pressure', 'Sigma Pressure', 'Ignition Power',
                   'Sigma Extinction Power']
 
 def get_data(filename='../resources/Plasma_Chamber.tsv'):
+    """
+    Gets the data from filename
+
+    @param filename: Filename to get data from. Must be tab delimted in the
+                     expected format. Defaults to data file's location in
+                     repo
+    @return Returns a dict of lists with keys of column names and values of
+            strings of values. Missing values have empty strings and no
+            data conversion is done
+    """
+
     # Dictionary for data
     data = defaultdict(list)
 
