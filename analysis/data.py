@@ -57,3 +57,19 @@ def get_float_data(data=get_data()):
             data[key] = [float(x) if x else None for x in value]
 
     return data
+
+def min_max_values(data, errors):
+    """
+    Gets an array of minumum and maximum values of data with errors given in
+    errors
+
+    @param data: Array of mean data points
+    @param errors: Array of errors
+    @return Tuple of ([minimum], [maximum]) values
+    """
+
+    return ([data[i] - errors[i] if data[i] and errors[i] else None 
+            for i in range(0, len(data))],
+            [data[i] + errors[i] if data[i] and errors[i] else None
+            for i in range(0, len(data))])
+
