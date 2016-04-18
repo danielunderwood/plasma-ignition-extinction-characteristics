@@ -36,6 +36,17 @@ Data was recorded manually and statistical uncertainties were taken to be the ma
 
 The experimental procedure was to first pump the target chamber to a vacuum of $10^{-1}\:\rm{T}$ and then apply power between the plates until a plasma ignites. At the ignition of the plasma, we collect the ``ignition'' voltage at ignition and then the ``equilibrium'' voltage once the voltage drops due to a change in properties of the material between the plates, which is now a plasma rather than a gas and thus has different electrical properties, causing the drop in voltage. The ``equilibrium'' voltage is of some interest, but is now analyzed in this paper. After the voltage drops and ``equilibrium'' voltage is taken, we decrease the power delivered by the power supply at a rate of approximately $1\:\rm{W}$ per second until the illuminated Debye sheath disappears; at this point, we collect the ``extinction'' voltage of the plasma.
 
+The intention was to analyze the collected data in the form of a Paschen curve with the form given in \cref{eqn:paschen-curve}.
+
+\begin{equation}
+V_B = \frac{B p d}{\ln{\left( A p d \right)} - \ln{\left[ \ln{\left( 1 + \gamma_{\rm{se}}^{-1} \right)} \right]}}
+\label{eqn:paschen-curve}
+\end{equation}
+
+where $V_B$ is the breakdown voltage, which we refer to as the ignition voltage, $p$ is the pressure, $d$ is the distance between the plates, $A$ and $B$ are fit parameters which are related to the saturation ionization of the gas and excitation and ionization energies, respectively, and $\gamma_{\rm{se}}$ is the secondary electron emission coefficient at the cathode \cite{Lieberman2005}.
+
+Unfortunately, as discussed in later sections, our data was not able to be analyzed with the model due to fundamental discrepancies of the data and that of a Paschen curve.
+
 \section{Results}
 
 The collected voltage data is shown in \cref{fig:ignition-equilibrium-extinction}.
