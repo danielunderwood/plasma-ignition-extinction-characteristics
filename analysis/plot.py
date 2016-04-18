@@ -26,7 +26,8 @@ def plot_ignition_voltages(data=get_float_data(), fig=None):
         plt.sca(fig.gca())
 
     # Plot points
-    plt.scatter(data['Pressure'], data['Ignition Voltage'], s=10)
+    plt.scatter(data['Pressure'], data['Ignition Voltage'],
+                label='Ignition Voltage', s=15, color='black')
 
     # Get minimum and max values for pressure errors
     pressure_minimums, pressure_maximums = min_max_values(data['Pressure'],
@@ -62,7 +63,7 @@ def plot_equilibrium_voltages(data=get_float_data(), fig=None):
 
     # Plot equilibrium voltages
     plt.scatter(data['Pressure'], data['Equilibrium Voltage'], marker='s',
-           s=10, color='red')
+                label='Equilibrium Voltage', s=10, color='red')
 
     # Error bars for equilibrium voltages
     # Get minimum and max values for pressure errors
@@ -96,7 +97,7 @@ def plot_extinction_voltages(data=get_float_data(), fig=None):
 
     # Plot extinction voltages
     plt.scatter(data['Pressure'], data['Extinction Voltage'], marker='D',
-            s=10, color='green')
+                label='Extinction Voltage', s=15, color='green')
 
     # Error bars for extinction voltages
     # Get minimum and max values for pressure errors
