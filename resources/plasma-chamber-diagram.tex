@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+
+\begin{document}
+\begin{circuitikz}
+			% Vacuum Chamber
+			\draw (1, -3) -- (1, -2) -- (0, -2) -- (0,0) -- (3,0) -- (3, -2) -- (2,-2) -- (2,-3);
+			\node[text=black] at (1.5, -0.25) {\tiny Vacuum Chamber};
+			
+			% Air flow
+			\draw[->] (1.5, -2.5) -- (1.5, -3);
+			\node[text=black] at (1.5, -2.25) {\tiny Air Flow};
+			
+			% Capacitor plates
+			\draw[line width=0.25mm] (0.5, -1.75) -- (2.5, -1.75);
+			\draw[line width=0.25mm] (0.75, -1.25) -- (2.25, -1.25);
+			
+			% Ground
+			\draw (1.5, -1.25) -- (1.5, -1) -- (3, -1) node[ground, rotate=90] {};
+			
+			% Power supply
+			\draw (1.5, -1.75) -- (1.5, -1.9) -- (.5, -1.9) -- (.5, -2.5);
+			\draw (.5, -2.5) -- (.25, -2.5) -- (.25, -2.75) -- (.75, -2.75) -- (.75, -2.5) -- (.5, -2.5);
+			\node[text=black] at (.5, -2.625) {\tiny PSU};
+\end{circuitikz}
+\end{document}
