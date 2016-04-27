@@ -1,0 +1,2 @@
+# Specify root file to ShareLatex CI
+root_file: paper/plasma-ignition-extinction.tex
